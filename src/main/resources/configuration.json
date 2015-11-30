@@ -1,0 +1,14 @@
+{
+  "httpCheckers" : [{
+      "uri": "http://www.google.fr",
+      "lights": [
+        {
+          "address": 1,
+          "lightOkColor": "00FF00",
+          "lightOkEffect": "FULL",
+          "lightKoColor": "FF0000",
+          "lightKoEffect": "FF0000"
+        }
+      ]
+    }]
+}
