@@ -11,7 +11,22 @@ import java.util.List;
 public class Monitoring {
 
     /**
+     * Light network color if we have a network error.
+     */
+    private String lightNetworkErrorColor;
+
+    /**
+     * Light network effect if we have a network error.
+     */
+    private String lightNetworkErrorEffect;
+
+    /**
      * Jenkins checkers.
      */
-    private List<HttpChecker> httpCheckers;
+    private List<JenkinsChecker> jenkinsCheckers;
+
+    /**
+     * Breach monitor checkers.
+     */
+    private List<BreachMonitorChecker> breachMonitorCheckers;
 }

@@ -21,6 +21,17 @@ This is a Spring-Boot application to send Art-Net packet over Network. This appl
 #### Restart the kit ?
 
 
+### Jenkins Checker
+
+#### 1. Get your Jenkins API key :
+
+* Connect on Jenkins
+* Go on your profile (jenkins/user/cazelart/configure)
+* Click on show API Token (copy user id and token)
+
+#### 2. Create a configuration (configuration.json) :
+
+
 ### RESTfull WS
 
 #### 1. WS URI :
@@ -53,3 +64,11 @@ This is a Spring-Boot application to send Art-Net packet over Network. This appl
 > **HTTP GET**
 > /api/light/set/1/000000/BLINK
 > Turn on the light in red and blink
+
+
+#### 4. Install Raspberry PI 2 :
+* OS : Raspbian (https://www.raspbian.org/FrontPage)
+
+> apt-get update
+> apt-get upgrade
+> apt-get install openjdk-8-jdk

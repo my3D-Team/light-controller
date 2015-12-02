@@ -1,14 +1,35 @@
 {
-  "httpCheckers" : [{
-      "uri": "http://www.google.fr",
+  "lightNetworkErrorColor": "FFDD00",
+  "lightNetworkErrorEffect" : "BLINK",
+  "jenkinsCheckers" : [{
+      "uri": "http://10.75.162.131:9090/jenkins/",
+      "job": "VVM-DEV-DEPLOY",
+      "userId": "cazelart",
+      "token": "90608412f5ef5e05280f64f5cd1bd81d",
       "lights": [
         {
           "address": 1,
-          "lightOkColor": "00FF00",
-          "lightOkEffect": "FULL",
-          "lightKoColor": "FF0000",
-          "lightKoEffect": "FF0000"
+          "lightSuccessColor": "00FF00",
+          "lightSuccessEffect": "FULL",
+          "lightUnstableColor": "FFC457",
+          "lightUnstableEffect": "FULL",
+          "lightFailureColor": "FF0000",
+          "lightFailureEffect": "FULL",
+          "lightNotBuildColor": "FF0000",
+          "lightNotBuildEffect": "FULL",
+          "lightAbortedColor": "FFC457",
+          "lightAbortedEffect": "FULL"
         }
       ]
-    }]
+    }],
+  "breachMonitorCheckers" : [{
+    "uri": "http://breachmonitor.capgemini.com/glodaluyae18/htdocs/index.php?s=7",
+    "lights": [
+      {
+        "address": 1,
+        "lightColorSlaBreached": "FF0000",
+        "lightColorSlaWithin": "FFFF00"
+      }
+    ]
+  }]
 }

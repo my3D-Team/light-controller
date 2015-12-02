@@ -14,22 +14,54 @@ public class Light {
     private Short address;
 
     /**
-     * Light OK color.
+     * Light color.
      */
-    private String lightOkColor;
+    private String lightSuccessColor;
 
     /**
-     * Light OK effect.
+     * Light effect.
      */
-    private String lightOkEffect;
+    private String lightSuccessEffect;
 
     /**
-     * Light KO color.
+     * Light color.
      */
-    private String lightKoColor;
+    private String lightUnstableColor;
 
     /**
-     * Light KO effect.
+     * Light effect.
      */
-    private String lightKoEffect;
+    private String lightUnstableEffect;
+
+    /**
+     * Light color.
+     */
+    private String lightFailureColor;
+
+    /**
+     * Light effect.
+     */
+    private String lightFailureEffect;
+
+    /**
+     * Light color.
+     */
+    private String lightNotBuildColor;
+
+    /**
+     * Light effect.
+     */
+    private String lightNotBuildEffect;
+
+    /**
+     * Light color.
+     */
+    private String lightAbortedColor;
+
+    /**
+     * Light effect.
+     */
+    private String lightAbortedEffect;
+
+
 }

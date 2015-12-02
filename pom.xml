@@ -21,6 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<start-class>com.capgemini.LightControllerApplication</start-class>
 	</properties>
 
 	<dependencies>
@@ -50,6 +51,30 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.asciidoctor</groupId>
+				<artifactId>asciidoctor-maven-plugin</artifactId>
+				<version>1.5.2</version>
+				<executions>
+					<execution>
+						<id>output-html</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceDirectory>${basedir}/src/main/doc</sourceDirectory>
+					<outputDirectory>${project.build.directory}/generated-docs</outputDirectory>
+					<backend>html</backend>
+					<preserveDirectories>true</preserveDirectories>
+					<!-- replacing default dir to make it work also with CLI and Chrome plugin -->
+					<imagesDir>.</imagesDir>
+					<!-- for syntax hightlighter on source code -->
+					<sourceHighlighter>coderay</sourceHighlighter>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

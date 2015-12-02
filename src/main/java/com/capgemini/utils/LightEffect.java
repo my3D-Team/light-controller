@@ -7,7 +7,5 @@ public enum LightEffect {
 
     FULL,
 
-    BLINK,
-
-    STROB
+    BLINK
 }
