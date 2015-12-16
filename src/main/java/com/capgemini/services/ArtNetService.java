@@ -42,7 +42,7 @@ public class ArtNetService {
     private ArtNetServer artNetServer;
 
     /**
-     * Map light state.
+     * Map light-controller state.
      */
     private Map<Short, LightState> mapLightState;
 
@@ -132,17 +132,18 @@ public class ArtNetService {
     }
 
     /**
-     * Send a light state.
-     * @param address is the light address.
-     * @param hexa is the light color.
+     * Send a light-controller state.
+     * @param address is the light-controller address.
+     * @param hexa is the light-controller color.
      * @throws ArtNetServiceException if we have a problem I/O network.
      */
-    public void sendLightState(final Short address, final String hexa) throws ArtNetServiceException {
+    public void sendLightState(Short address, final String hexa) throws ArtNetServiceException {
         final Integer startAddress = address - 1;
         dmx[startAddress] = 1;
         dmx[startAddress + 1] = Integer.parseInt(hexa.substring(0, 2), 16); // RED
         dmx[startAddress + 2] = Integer.parseInt(hexa.substring(2, 4), 16); // GREEN
         dmx[startAddress + 3] = Integer.parseInt(hexa.substring(4, 6), 16); // BLUE
+        //logger.info(String.format("Address : %s (%s,%s,%s,%s)", startAddress, dmx[startAddress], dmx[startAddress + 1], dmx[startAddress + 2], dmx[startAddress + 3]));
         this.sendPacket(dmx);
     }
 

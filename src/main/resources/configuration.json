@@ -19,6 +19,18 @@
           "lightNotBuildEffect": "FULL",
           "lightAbortedColor": "FFC457",
           "lightAbortedEffect": "FULL"
+        },{
+          "address": 5,
+          "lightSuccessColor": "00FF00",
+          "lightSuccessEffect": "FULL",
+          "lightUnstableColor": "FFC457",
+          "lightUnstableEffect": "FULL",
+          "lightFailureColor": "FF0000",
+          "lightFailureEffect": "FULL",
+          "lightNotBuildColor": "FF0000",
+          "lightNotBuildEffect": "FULL",
+          "lightAbortedColor": "FFC457",
+          "lightAbortedEffect": "FULL"
         }
       ]
     }],

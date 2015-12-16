@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LightController {
 
     /**
-     * Inject light service.
+     * Inject light-controller service.
      */
     @Autowired
     private LightService lightService;
@@ -27,11 +27,11 @@ public class LightController {
 
 
     /**
-     * Perform a light change state.
+     * Perform a light-controller change state.
      * @param address is the address
      * @param color is the color
-     * @return a light state
-     * @throws LightStateException if we have an invalid request on light state
+     * @return a light-controller state
+     * @throws LightStateException if we have an invalid request on light-controller state
      * @throws ArtNetServiceException if we can't make I/O call
      */
     @RequestMapping(method = RequestMethod.GET, value = "set/{address}/{color}")
@@ -41,12 +41,12 @@ public class LightController {
     }
 
     /**
-     * Perform a light change state.
+     * Perform a light-controller change state.
      * @param address is the address
      * @param color is the color
      * @param effect is the effect
-     * @return a light state
-     * @throws LightStateException if we have an invalid request on light state
+     * @return a light-controller state
+     * @throws LightStateException if we have an invalid request on light-controller state
      * @throws ArtNetServiceException if we can't make I/O call
      */
     @RequestMapping(method = RequestMethod.GET, value = "set/{address}/{color}/{effect}")

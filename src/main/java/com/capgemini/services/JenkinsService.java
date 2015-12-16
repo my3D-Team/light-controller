@@ -114,7 +114,7 @@ public class JenkinsService {
             LightState lightState = null;
 
             if(jenkinsBuild.getResult() != null && !jenkinsBuild.getBuilding()) {
-                logger.info(String.format("The jenkins checker %s is in the %s state (#%s)", jenkinsChecker.getJob(), jenkinsBuild.getResult(), jenkinsBuild.getNumber()));
+                //logger.info(String.format("The jenkins checker %s is in the %s state (#%s)", jenkinsChecker.getJob(), jenkinsBuild.getResult(), jenkinsBuild.getNumber()));
                 if(jenkinsBuild.getResult().equals(Constants.JENKINS_SUCCESS)) {
                     lightState = new LightState(light.getAddress(), light.getLightSuccessColor(), Enum.valueOf(LightEffect.class, light.getLightSuccessEffect()));
                 } else if(jenkinsBuild.getResult().equals(Constants.JENKINS_ABORTED)) {
@@ -127,15 +127,15 @@ public class JenkinsService {
                     lightState = new LightState(light.getAddress(), light.getLightUnstableColor(), Enum.valueOf(LightEffect.class, light.getLightUnstableEffect()));
                 }
 
-                // Try to update light state.
+                // Try to update light-controller state.
                 try {
                     if(lightState != null) {
                         lightService.setState(lightState);
                     }
                 } catch (final LightStateException e) {
-                    logger.error("Unable to update the light color", e);
+                    logger.error("Unable to update the light-controller color", e);
                 } catch (final ArtNetServiceException e) {
-                    logger.error("Unable to update the light color", e);
+                    logger.error("Unable to update the light-controller color", e);
                 }
             }
         }

@@ -81,8 +81,8 @@ public class BreachMonitorService {
     }
 
     /**
-     * Update the light
-     * @param lightBreachs are light breachs
+     * Update the light-controller
+     * @param lightBreachs are light-controller breachs
      * @param breached if is breached
      * @throws LightStateException if we have a problem
      * @throws ArtNetServiceException if we have a problem

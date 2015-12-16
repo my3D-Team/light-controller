@@ -4,13 +4,13 @@ import com.capgemini.utils.LightEffect;
 import lombok.Data;
 
 /**
- * A light state.
+ * A light-controller state.
  */
 @Data
 public class LightState {
 
     /**
-     * The light address, a light between 1 and 512.
+     * The light-controller address, a light-controller between 1 and 512.
      * Only on one universe.
      */
     private short address;
@@ -28,8 +28,8 @@ public class LightState {
     /**
      * Constructor.
      * @param address is the default address.
-     * @param color is the light color.
-     * @param lightEffect is the light effect
+     * @param color is the light-controller color.
+     * @param lightEffect is the light-controller effect
      */
     public LightState(final Short address, final String color, final LightEffect lightEffect) {
         this.address = address;
@@ -40,7 +40,7 @@ public class LightState {
     /**
      * Constructor.
      * @param address is the default address.
-     * @param lightEffect is the light effect
+     * @param lightEffect is the light-controller effect
      */
     public LightState(final Short address, final LightEffect lightEffect) {
         this.address = address;
